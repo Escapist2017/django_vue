@@ -1,0 +1,27 @@
+.divForm{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 40%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+}
+#form-login {
+    padding: 5%;
+    display: block;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.5);
+
+}
+#divcss1 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#buttoncss1 {
+    width: 100%;
+    background-color: #a6e1ec;
+    font-size: larger;
+}

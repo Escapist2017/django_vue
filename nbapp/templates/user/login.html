@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/base.css" rel="stylesheet" />
+    <link href="/static/css/login.css" rel="stylesheet" />
+</head>
+<%! from django.shortcuts import reverse %>
+<%
+    _login = reverse('login')
+    action = _login if not next else '{}?next={}'.format(_login, next)
+%>
+<body>
+   <div class="divForm">
+        <h1 align="center">欢迎登录工参管理平台</h1>
+        <form id="form-login" action="${action}" method="POST">${csrf_token}
+            <div class="form-group">
+                <label for="username">帐号</label>
+                <input type="text" class="form-control" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <div id="divcss1">
+                <button id="buttoncss1" type="submit" class="btn btn-default">登录</button>
+            </div>
+            <a href="${reverse('regist')}">注册</a>
+            <a style="float: right">忘记密码</a>
+            % if error:
+                <p class="text-center"><mark>${error}</mark></p>
+            % endif
+        </form>
+    </div>
+</body>
+</html>

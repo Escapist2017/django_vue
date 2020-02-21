@@ -1,0 +1,24 @@
+.divForm{
+    position: absolute;/*绝对定位*/
+    width: 400px;
+    height: 300px;
+    top: 40%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+
+}
+#form-regist {
+    padding: 5%;
+    display: block;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.5); /*白色背景 50%透明度*/
+}
+#reset {
+    float: right;
+}
+/*{% load static %}*/
+/*body {*/
+/*    background-image: url({% static '2.jpg' %});*/
+/*    background-repeat:no-repeat;*/
+/*}*/
